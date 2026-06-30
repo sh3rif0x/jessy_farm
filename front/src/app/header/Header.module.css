@@ -87,18 +87,26 @@
 }
 
 .whatsapp {
-    text-decoration: none;
-    color: #2e7d32;
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: transparent;
     border: 2px solid #2e7d32;
-    padding: 12px 20px;
-    border-radius: 12px;
-    transition: 0.3s;
+    color: #2e7d32;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .whatsapp:hover {
     background: #2e7d32;
     color: white;
+    transform: scale(1.05);
 }
 
 .bookBtn {

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { FaWhatsapp } from "react-icons/fa";
 import styles from "./Header.module.css";
 
 const navItems = [
@@ -58,9 +59,11 @@ export default function Header() {
           <a
             href="https://wa.me/201018696230"
             target="_blank"
+            rel="noreferrer"
             className={styles.whatsapp}
+            title="تواصل معنا عبر واتساب"
           >
-            واتساب
+            <FaWhatsapp size={20} />
           </a>
 
           <button className={styles.bookBtn}>
