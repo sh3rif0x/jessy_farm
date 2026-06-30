@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+.maindiv {
+    min-height: 100vh;
+    background: linear-gradient( 135deg, #f8f5ee 0%, #eef7ec 50%, #e5f3e3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    font-family: "Cairo", sans-serif;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.content {
+    flex: 1;
+    direction: rtl;
+    text-align: right;
+}
+
+.badge {
+    display: inline-block;
+    padding: 10px 18px;
+    background: rgba(46, 125, 50, 0.12);
+    color: #2e7d32;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: #1f2937;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #4b5563;
+    margin-bottom: 35px;
+    max-width: 700px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.features span {
+    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    color: #2e7d32;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.primaryBtn {
+    padding: 15px 32px;
+    border: none;
+    border-radius: 14px;
+    background: #2e7d32;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-3px);
+}
+
+.secondaryBtn {
+    padding: 15px 32px;
+    border-radius: 14px;
+    border: 2px solid #2e7d32;
+    background: transparent;
+    color: #2e7d32;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.imageWrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.bannerImage {
+    width: 100%;
+    max-width: 550px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 25px 60px rgba(46, 125, 50, 0.2);
+}
+
+.card {
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    color: #2e7d32;
+}
+
+.card p {
+    margin: 0;
+    color: #666;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .content {
+        text-align: center;
+    }
+    .title {
+        font-size: 2.8rem;
+    }
+    .features,
+    .actions {
+        justify-content: center;
+    }
+    .bannerImage {
+        height: 450px;
+    }
+}

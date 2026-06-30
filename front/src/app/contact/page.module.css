@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+.page {
+    min-height: 100vh;
+    background: #f8f5ee;
+    direction: rtl;
+    font-family: "Cairo", sans-serif;
+}
+
+.hero {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px 60px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(46, 125, 50, 0.12);
+    color: #2e7d32;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #1f2937;
+    margin: 25px 0;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #6b7280;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+}
+
+.contactInfo,
+.formCard {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.contactInfo h2,
+.formCard h2 {
+    margin-bottom: 30px;
+    color: #1f2937;
+    font-size: 2rem;
+}
+
+.infoCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.infoCard span {
+    font-size: 1.8rem;
+}
+
+.infoCard h3 {
+    margin: 0 0 6px;
+    color: #2e7d32;
+    font-size: 1.1rem;
+}
+
+.infoCard p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+.socials {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.socials a {
+    text-decoration: none;
+    background: #2e7d32;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    transform: translateY(-2px);
+    background: #256628;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+    outline: none;
+    border-color: #2e7d32;
+    background: white;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.form button {
+    border: none;
+    background: #2e7d32;
+    color: white;
+    padding: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background: #256628;
+    transform: translateY(-2px);
+}
+
+.mapSection {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px 100px;
+}
+
+.mapSection h2 {
+    margin-bottom: 25px;
+    color: #1f2937;
+    font-size: 2rem;
+}
+
+.mapPlaceholder {
+    height: 450px;
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e7d32;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .hero {
+        padding: 70px 20px 40px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .mapSection {
+        padding: 20px;
+    }
+    .contactInfo,
+    .formCard {
+        padding: 25px;
+    }
+    .mapPlaceholder {
+        height: 300px;
+    }
+}
