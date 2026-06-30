@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -27,13 +28,13 @@ export default function Page() {
           </div>
 
           <div className={styles.actions}>
-            <button className={styles.primaryBtn}>
+            <Link href="/booking" className={styles.primaryBtn}>
               احجز الآن
-            </button>
+            </Link>
 
-            <button className={styles.secondaryBtn}>
+            <Link href="/food" className={styles.secondaryBtn}>
               استكشف المزرعة
-            </button>
+            </Link>
           </div>
         </div>
 
