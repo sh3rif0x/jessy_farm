@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .page {
     font-family: "Cairo", sans-serif;
 }
@@ -18,7 +38,7 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient( rgba(0, 0, 0, .55), rgba(0, 0, 0, .35));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0) 0%);
 }
 
 .content {
@@ -98,6 +118,7 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
 .info div {

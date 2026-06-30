@@ -1,14 +1,41 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
+const navItems = [
+  { href: "/", label: "الرئيسية" },
+  { href: "/about", label: "من نحن" },
+  { href: "/activities", label: "الأنشطة" },
+  { href: "/booking", label: "الحجز" },
+  { href: "/food", label: "الأكلات" },
+  { href: "/gallery", label: "المعرض" },
+  { href: "/contact", label: "تواصل معنا" },
+];
+
+function isActive(pathname, href) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(href + "/");
+}
+
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoIcon}>🌿</span>
+          <div className={styles.logoImage}>
+            <Image
+              src="/logo.jpeg"
+              alt="جيسي فارم"
+              width={55}
+              height={55}
+              priority
+            />
+          </div>
           <div>
             <h2>جيسي فارم</h2>
             <p>Jessi Farm</p>
@@ -16,12 +43,15 @@ export default function Header() {
         </Link>
 
         <nav className={styles.nav}>
-          <Link href="/">الرئيسية</Link>
-          <Link href="/about">من نحن</Link>
-          <Link href="/activities">الأنشطة</Link>
-          <Link href="/food">الأكلات</Link>
-          <Link href="/gallery">المعرض</Link>
-          <Link href="/contact">تواصل معنا</Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={isActive(pathname, item.href) ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <div className={styles.actions}>

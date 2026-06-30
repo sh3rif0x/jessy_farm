@@ -1,16 +1,11 @@
-import Header from "./header/header";
 import Home from "./home/page";
-import Footer from "./footer/footer";
-import Home2 from "./home2/page";
+import FeaturedSection from "./featured-section/page";
 
-export default function RootLayout({ children }) {
+export default function HomePage() {
   return (
-    <html lang="ar" dir="rtl">
-      <body>
-        <Home />
-        <Home2 />
-        {children}
-      </body>
-    </html>
+    <>
+      <Home />
+      <FeaturedSection />
+    </>
   );
 }

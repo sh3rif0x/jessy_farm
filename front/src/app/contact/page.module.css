@@ -40,68 +40,49 @@
     margin: 0 auto;
     padding: 40px;
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 40px;
+    align-items: start;
 }
 
-.contactInfo,
-.formCard {
+.formCard,
+.imageCard {
     background: #ffffff;
     border-radius: 30px;
     padding: 35px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
 }
 
-.contactInfo h2,
+.formCard h2,
+.imageCard h2 {
+    margin-bottom: 30px;
+    color: #1f2937;
+    font-size: 2rem;
+}
+
+.imageCard {
+    overflow: hidden;
+    padding: 0;
+}
+
+.imageCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px;
+}
+
 .formCard h2 {
     margin-bottom: 30px;
     color: #1f2937;
     font-size: 2rem;
 }
 
-.infoCard {
+.formCard {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     gap: 18px;
-    margin-bottom: 25px;
-}
-
-.infoCard span {
-    font-size: 1.8rem;
-}
-
-.infoCard h3 {
-    margin: 0 0 6px;
-    color: #2e7d32;
-    font-size: 1.1rem;
-}
-
-.infoCard p {
-    margin: 0;
-    color: #6b7280;
-    line-height: 1.8;
-}
-
-.socials {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.socials a {
-    text-decoration: none;
-    background: #2e7d32;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 12px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.socials a:hover {
-    transform: translateY(-2px);
-    background: #256628;
 }
 
 .form {
@@ -153,6 +134,56 @@
     transform: translateY(-2px);
 }
 
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fafafa;
+    color: #1f2937;
+    transition: 0.3s;
+}
+
+.form input::placeholder,
+.form textarea::placeholder,
+.form select option {
+    color: #9ca3af;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+    outline: none;
+    border-color: #2e7d32;
+    background: white;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.form button {
+    border: none;
+    background: #2e7d32;
+    color: white;
+    padding: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background: #256628;
+    transform: translateY(-2px);
+}
+
 .mapSection {
     max-width: 1400px;
     margin: 0 auto;
@@ -166,16 +197,36 @@
 }
 
 .mapPlaceholder {
+    position: relative;
     height: 450px;
-    background: white;
+    background: #f8faf3;
     border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2e7d32;
-    font-size: 1.5rem;
-    font-weight: 700;
+    overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.mapPlaceholder iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.mapLink {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(46, 125, 50, 0.95);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.mapLink:hover {
+    transform: translateY(-2px);
+    background: #2e7d32;
 }
 
 @media (max-width: 992px) {

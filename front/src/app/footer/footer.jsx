@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./footer.module.css";
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         {/* About */}
         <div className={styles.column}>
           <div className={styles.logo}>
-            <img src="/logo.png" alt="Jessi Farm" />
+            <img src="/logo.jpeg" alt="Jessi Farm" />
             <div>
               <h2>جيسي فارم</h2>
               <span>Jessi Farm</span>
@@ -59,10 +60,18 @@ export default function Footer() {
           <p>✉️ info@jessifarm.com</p>
 
           <div className={styles.socials}>
-            <a href="#" target="_blank">Facebook</a>
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">TikTok</a>
-            <a href="#" target="_blank">WhatsApp</a>
+            <a href="https://web.facebook.com/Jessi1farm/?locale=ar_AR&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" title="Facebook">
+              <FaFacebook />
+            </a>
+            <a href="https://www.instagram.com/jessifarm/" target="_blank" rel="noopener noreferrer" title="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="https://www.tiktok.com/@jessi.farm" target="_blank" rel="noopener noreferrer" title="TikTok">
+              <FaTiktok />
+            </a>
+            <a href="https://wa.me/201018696230" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
       </div>

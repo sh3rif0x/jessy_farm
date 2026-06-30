@@ -32,23 +32,6 @@ export default function Home() {
               اكتشف المزيد
             </button>
           </div>
-
-          <div className={styles.info}>
-            <div>
-              <h2>4000+</h2>
-              <span>زائر</span>
-            </div>
-
-            <div>
-              <h2>30K+</h2>
-              <span>متابع</span>
-            </div>
-
-            <div>
-              <h2>100%</h2>
-              <span>تجربة ريفية</span>
-            </div>
-          </div>
         </div>
       </section>
     </main>
