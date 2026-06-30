@@ -7,10 +7,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
       <body>
-        <Header />
         <Home />
         <Home2 />
-        <Footer />
         {children}
       </body>
     </html>
