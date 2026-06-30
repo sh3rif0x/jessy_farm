@@ -115,6 +115,15 @@
     font-size: 15px;
 }
 
+.developerLink {
+    color: #6fd96f;
+    text-decoration: none;
+}
+
+.developerLink:hover {
+    text-decoration: underline;
+}
+
 @media(max-width:1100px) {
     .container {
         grid-template-columns: 1fr 1fr;

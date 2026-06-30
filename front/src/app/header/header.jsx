@@ -1,9 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Header.module.css";
 
 const navItems = [
@@ -23,6 +24,7 @@ function isActive(pathname, href) {
 
 export default function Header() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -43,11 +45,12 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => setIsOpen(false)}
               className={isActive(pathname, item.href) ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}
             >
               {item.label}
@@ -69,6 +72,14 @@ export default function Header() {
           <Link href="/booking" className={styles.bookBtn}>
             احجز الآن
           </Link>
+
+          <button
+            className={styles.mobileMenuBtn}
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Toggle mobile menu"
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
       </div>
     </header>

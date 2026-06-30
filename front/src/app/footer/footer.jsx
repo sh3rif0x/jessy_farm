@@ -69,7 +69,7 @@ export default function Footer() {
             <a href="https://www.tiktok.com/@jessi.farm" target="_blank" rel="noopener noreferrer" title="TikTok">
               <FaTiktok />
             </a>
-            <a href="https://wa.me/201018696230" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+            <a href="https://wa.me/201279924599" target="_blank" rel="noopener noreferrer" title="WhatsApp">
               <FaWhatsapp />
             </a>
           </div>
@@ -82,7 +82,7 @@ export default function Footer() {
         </p>
 
         <p>
-          Designed & Developed with ❤️ for Jessi Farm
+          هذا الموقع مطور بواسطة sh3rif0x - <a href="https://wa.me/201279924599" target="_blank" rel="noopener noreferrer" className={styles.developerLink}>واتساب</a>
         </p>
       </div>
     </footer>
