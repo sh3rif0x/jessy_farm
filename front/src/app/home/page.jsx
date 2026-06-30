@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -24,13 +25,13 @@ export default function Home() {
           </p>
 
           <div className={styles.buttons}>
-            <button className={styles.bookBtn}>
+            <Link href="/booking" className={styles.bookBtn}>
               احجز الآن
-            </button>
+            </Link>
 
-            <button className={styles.moreBtn}>
+            <Link href="/about" className={styles.moreBtn}>
               اكتشف المزيد
-            </button>
+            </Link>
           </div>
         </div>
       </section>

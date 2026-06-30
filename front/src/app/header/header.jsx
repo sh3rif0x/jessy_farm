@@ -66,9 +66,9 @@ export default function Header() {
             <FaWhatsapp size={20} />
           </a>
 
-          <button className={styles.bookBtn}>
+          <Link href="/booking" className={styles.bookBtn}>
             احجز الآن
-          </button>
+          </Link>
         </div>
       </div>
     </header>

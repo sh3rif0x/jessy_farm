@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+:global(body) {
+    background: white;
+}
 
 .foodSection {
     width: min(1400px, 92%);
     margin: 80px auto 120px;
     padding: 24px;
-    background: rgba(255, 255, 255, 0.92);
+    background: white;
     border-radius: 40px;
-    box-shadow: 0 28px 70px rgba(15, 23, 42, 0.08);
+    box-shadow: none;
 }
 
 .sectionTitle {
@@ -132,7 +135,6 @@
     .sectionTitle h2 {
         font-size: 2.6rem;
     }
-
     .foodInfo {
         padding: 24px;
     }
@@ -143,15 +145,12 @@
         margin: 40px auto 70px;
         padding: 16px;
     }
-
     .sectionTitle {
         margin-bottom: 56px;
     }
-
     .foodInfo h3 {
         font-size: 1.6rem;
     }
-
     .foodInfo button {
         font-size: 0.98rem;
     }
